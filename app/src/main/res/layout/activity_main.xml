@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<TextView
+android:id="@+id/textView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="@string/app_name"
+android:textSize="35sp"
+android:gravity="center"
+android:textStyle="bold"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:layout_marginTop="100dp"
+android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonSet25"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="setTimer25Minutes"
+        android:text="@string/min25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@id/buttonSet3"
+        app:layout_constraintHorizontal_weight="1"/>
+
+    <Button
+        android:id="@+id/buttonSet3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="setTimer3Minutes"
+        android:text="@string/min3"
+        app:layout_constraintStart_toEndOf="@id/buttonSet25"
+        app:layout_constraintTop_toTopOf="@id/buttonSet25"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toStartOf="@id/buttonSet15"
+        app:layout_constraintHorizontal_weight="1"/>
+
+    <Button
+        android:id="@+id/buttonSet15"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="setTimer15Minutes"
+        android:text="@string/min15"
+        app:layout_constraintStart_toEndOf="@id/buttonSet3"
+        app:layout_constraintTop_toTopOf="@id/buttonSet3"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"/>
+
+    <TextView
+        android:id="@+id/textViewTimer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/timer"
+        android:textSize="48sp"
+        android:padding="16dp"
+        android:textAlignment="center"
+    android:background="@drawable/corner"
+    app:layout_constraintTop_toBottomOf="@id/buttonSet25"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <Button
+        android:id="@+id/buttonStartPause"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button"
+        app:layout_constraintTop_toBottomOf="@id/textViewTimer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="24sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

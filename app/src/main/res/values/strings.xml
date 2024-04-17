@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pomodoro App</string>
+    <string name="timer">25:00</string>
+    <string name="button">Start</string>
+    <string name="min25">Work</string>
+    <string name="min3">Short break</string>
+    <string name="min15">Long break</string>
+</resources>
